@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Página de Cadastro</h1>
+    <form>
+        <label for="username">Nome Completo:</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="age">Idade:</label><br>
+        <input type="number" id="age" name="age" min="18" max="120" required><br>
+
+        <label for="mail">E-mail:</label><br>
+        <input type="email" id="mail" name="mail" required><br>
+
+        <label for="city">Cidade:</label><br>
+        <input type="text" id="city" name="city" required><br>
+        
+        <label for="select">Tipo de conta:</label><br>
+        <select name="select" id="select" required> 
+            <option value="" disabled selected>Selecione</option>
+            <option value="v1">Cooperativo</option>
+            <option value="v2">Usuário</option>
+        </select><br>
+
+        <label for="pwd">Senha:</label><br>
+        <input type="password" id="pwd" name="pwd" required><br><br>
+    </form>
+
+    <a href="login.html">
+        <button type="button">Enviar</button>
+      </a>
+</body>
+</html>
