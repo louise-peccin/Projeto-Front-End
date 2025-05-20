@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <h1>Login</h1>
-    <form>
-        <label for="mail">E-mail:</label><br>
-        <input type="email" id="mail" name="mail" required><br>
-        <label for="pwd">Senha:</label><br>
-        <input type="password" id="pwd" name="pwd" required><br><br>
+    <h1>Bem-vindo(a)!</h1>
+
+    <div class="icons">
+        <i class="fas fa-recycle"></i>
+        <i class="fas fa-tree"></i>
+    </div>
+
+    <form action="principal.html">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button type="submit">Entrar</button>
     </form>
-    <a href="principal.html">
-        <button type="button">Entrar</button>
-      </a>
+
+    <p style="text-align: center; margin-top: 10px;">
+        Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+    </p>
 </body>
 </html>
