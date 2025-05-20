@@ -4,35 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <h1>Página de Cadastro</h1>
-    <form>
-        <label for="username">Nome Completo:</label><br>
-        <input type="text" id="username" name="username" required><br>
 
-        <label for="age">Idade:</label><br>
-        <input type="number" id="age" name="age" min="18" max="120" required><br>
+    <div class="icons">
+        <i class="fas fa-trash-alt"></i>
+        <i class="fas fa-leaf"></i>
+        <i class="fas fa-earth-americas"></i>
+    </div>
 
-        <label for="mail">E-mail:</label><br>
-        <input type="email" id="mail" name="mail" required><br>
+    <form action="login.html">
+        <label for="username">Nome Completo:</label>
+        <input type="text" id="username" name="username" required>
 
-        <label for="city">Cidade:</label><br>
-        <input type="text" id="city" name="city" required><br>
-        
-        <label for="select">Tipo de conta:</label><br>
-        <select name="select" id="select" required> 
+        <label for="age">Idade:</label>
+        <input type="number" id="age" name="age" min="18" max="120" required>
+
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="mail" required>
+
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="select">Tipo de conta:</label>
+        <select name="select" id="select" required>
             <option value="" disabled selected>Selecione</option>
             <option value="v1">Cooperativo</option>
             <option value="v2">Usuário</option>
-        </select><br>
+        </select>
 
-        <label for="pwd">Senha:</label><br>
-        <input type="password" id="pwd" name="pwd" required><br><br>
+        <label for="pwd">Senha:</label>
+        <input type="password" id="pwd" name="pwd" required>
+
+        <button type="submit">Enviar</button>
     </form>
 
-    <a href="login.html">
-        <button type="button">Enviar</button>
-      </a>
+    <p style="text-align: center; margin-top: 15px;">
+        Já possui uma conta? <a href="login.html">Faça login</a>
+    </p>
 </body>
 </html>
