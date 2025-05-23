@@ -1,15 +1,15 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom, #e0f7fa, #a5d6a7);
+    background: #1D361F;
     margin: 0;
     padding: 0;
-    color: #2e7d32;
+    color: #859B48;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #1b5e20;
+    color: #859B48;
 }
 
 .icons {
@@ -19,12 +19,12 @@ h1 {
 
 .icons i {
     font-size: 40px;
-    color: #388e3c;
+    color: #859B48;
     margin: 0 10px;
 }
 
 form {
-    background-color: #ffffffee;
+    background-color: #ECE5DF;
     max-width: 400px;
     margin: 0 auto;
     padding: 25px;
@@ -47,7 +47,7 @@ input, select {
 }
 
 button {
-    background-color: #2e7d32;
+    background-color: #859B48;
     color: #fff;
     padding: 12px;
     border: none;
@@ -60,12 +60,12 @@ button {
 }
 
 button:hover {
-    background-color: #1b5e20;
+    background-color: #859B48;
 }
 
 a {
     text-decoration: none;
-    color: #1b5e20;
+    color: #859B48;
 }
 
 footer {
