@@ -1,37 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Projeto_Front-End</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>EcoRecicla - Coleta Seletiva</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Sistema de Reciclagem Inteligente</h1>
-        <p1>ODS 12 - Consumo e Produção Responsáveis</p1>
-    </header>
-    <nav>
-        <h2>Menu de Navegação</h2>
-        <a href="">Home</a>
-        <a href="">Pontos de Coleta</a>
-        <a href="">Guia de Reciclagem</a>
-        <a href="">Contato</a>
-    </nav>
-    <section>
-        <h3>Como Funciona</h3>
-        <a href="">Cadastre-se e encontre locais próximos</a>
-        <a href="">Separe seus resíduos corretamente</a>
-        <a href="">Leve até um ponto de coleta</a>
-    </section>
-    <footer>
-        <h4>Currículos dos integrantes</h4>
-        <a href="">Gabriela Saori</a>
-        <a href="">Julia</a>
-        <a href="">Louise</a>
 
-        <h5>Contato</h5>
+    <div id="topo"></div>
+    <header>
+        <nav>
+            <a href="#coleta-seletiva">COLETA SELETIVA</a>
+            <a href="#" onclick="abrirForum()"><i class="fas fa-comments"></i> FÓRUM</a>
+        </nav>
+        <a href="#topo" class="logo">
+            <img src="Logo.svg" alt="Logo do site">
+        </a>
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+            <button onclick="window.location.href='cadastro.html'"><i class="fas fa-user-plus"></i> Cadastrar</button>
+        </div>
+    </header>
+
+    <!-- Fórum de Conversação -->
+    <section class="forum-container" id="forumContainer" style="display: none;">
+        <h2>Fórum de Conversa</h2>
+        <div class="chat-box" id="chatBox">
+            <div class="message">Bem-vindo ao fórum! Aqui você pode tirar dúvidas sobre coleta seletiva e reciclagem.</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+            <button onclick="enviarMensagem()"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </div>
+    </section>
+
+    <main>
+        <section class="guia-coleta" id="coleta-seletiva">
+            <h1>POR QUE E COMO REALIZAR A COLETA SELETIVA?</h1>
+
+            <div class="informacao">
+                <div class="texto">
+                    <p>
+                        A coleta seletiva é um processo fundamental para reduzir os impactos ambientais causados pelo descarte incorreto de resíduos. Ela consiste na separação dos materiais de acordo com sua natureza, permitindo que sejam reciclados, reutilizados ou tenham uma destinação mais adequada. Esse processo ajuda a diminuir a quantidade de lixo encaminhada aos aterros sanitários e contribui para a preservação dos recursos naturais.
+                    </p>
+                    <p>
+                        Para facilitar a separação, a coleta seletiva utiliza lixeiras com cores diferentes, cada uma representando um tipo específico de resíduo, como papel, plástico, vidro, metal e orgânicos. Saber identificar corretamente onde descartar cada material é essencial para o funcionamento eficaz desse sistema.
+                    </p>
+                    <p>
+                        Este guia tem como objetivo explicar de forma simples e direta em qual lixeira cada tipo de lixo deve ser jogado, ajudando você a colaborar com a preservação do meio ambiente de maneira prática e consciente.
+                    </p>
+                </div>
+                <div class="charge">
+                    <img src="Reciclagem.jpeg" alt="Charge sobre reciclagem">
+                </div>
+            </div>
+
+            <!-- Caixas de texto adicionais -->
+            <div class="informacao">
+                <div class="texto">
+                    <h3><i class="fas fa-recycle"></i> Benefícios da Coleta Seletiva</h3>
+                    <p>Reduz a extração de recursos naturais, diminui a poluição, gera empregos na cadeia de reciclagem e economiza energia. Por exemplo, reciclar alumínio economiza 95% da energia necessária para produzir alumínio novo.</p>
+                </div>
+                <div class="texto">
+                    <h3><i class="fas fa-trash-alt"></i> Como Separar Corretamente</h3>
+                    <p>Lave embalagens antes de descartar, remova tampas e rótulos quando possível, e certifique-se de que os materiais estão secos. Materiais sujos podem contaminar toda uma carga reciclável.</p>
+                </div>
+                <div class="texto">
+                    <h3><i class="fas fa-exclamation-triangle"></i> O que Não Reciclar</h3>
+                    <p>Papel higiênico, guardanapos sujos, fraldas, espelhos, cerâmicas, lâmpadas e embalagens metalizadas não são recicláveis e devem ir para o lixo comum ou ter destinação especial.</p>
+                </div>
+            </div>
+
+            <div class="carrossel">
+                <h2>QUAL LIXO JOGAR EM CADA LIXEIRA?</h2>
+                <div class="carrossel-container">
+                    <button class="carrossel-btn" onclick="moverCarrossel(-1)">&#10094;</button>
+                    <div class="carrossel-slides">
+                        <div class="slide">
+                            <img src="Lixeira Azul - Papel.avif" alt="Lixeira Azul - Papel">
+                            <div class="slide-texto">
+                                <h3>Lixeira Azul</h3>
+                                <p>Papéis em geral: jornais, revistas, caixas, folhas de caderno.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="Lixeira Vermelha - Plástico.avif" alt="Lixeira Vermelha - Plástico" width="200" height="300">
+                            <div class="slide-texto">
+                                <h3>Lixeira Vermelha</h3>
+                                <p>Plásticos: garrafas, embalagens, sacolas, potes.</p>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="Lixeira Verde - Vidro.avif" alt="Lixeira Verde - Vidro">
+                            <div class="slide-texto">
+                                <h3>Lixeira Verde</h3>
+                                <p>Vidros: garrafas, potes, frascos (sem tampas metálicas).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn" onclick="moverCarrossel(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>Projeto Programação Web Front-End.</p>
+            <p>Todos os direitos reservados.&copy; <span id="ano-atual"></span></p>
+        </div>
         
-    </footer>    
+        <div class="footer-members">
+            <h4>Membros do Grupo:</h4>
+            <ul class="members-list">
+                <li><a href="curriculo_gabriela.pdf" target="_blank"><i class="fas fa-user-graduate"></i> Gabriela Saori Miyasaka</a></li>
+                <li><a href="curriculo_julia.pdf" target="_blank"><i class="fas fa-user-graduate"></i> Julia Beiroco Oliveira Fantini</a></li>
+                <li><a href="curriculo_louise.pdf" target="_blank"><i class="fas fa-user-graduate"></i> Louise Paccola Peccin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Ano atual no footer
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+        // Funções do Fórum
+        function abrirForum() {
+            const forum = document.getElementById("forumContainer");
+            forum.style.display = forum.style.display === "none" ? "block" : "none";
+        }
+
+        function enviarMensagem() {
+            const input = document.getElementById("messageInput");
+            const message = input.value.trim();
+            if (message !== "") {
+                const chatBox = document.getElementById("chatBox");
+                const newMsg = document.createElement("div");
+                newMsg.className = "message";
+                newMsg.textContent = message;
+                chatBox.appendChild(newMsg);
+                input.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+
+        // Carrossel
+        let slideIndex = 0;
+        
+        function moverCarrossel(n) {
+            const slides = document.querySelectorAll('.slide');
+            slideIndex += n;
+            
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            
+            const offset = -slideIndex * 100;
+            document.querySelector('.carrossel-slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Inicializa o carrossel
+        document.addEventListener('DOMContentLoaded', function() {
+            moverCarrossel(0); // Mostra o primeiro slide
+        });
+    </script>
 </body>
 </html>
