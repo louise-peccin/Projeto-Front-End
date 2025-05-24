@@ -41,14 +41,14 @@ Um projeto web para conscientização sobre coleta seletiva e reciclagem, com f�
 - Conexão com internet (para Font Awesome e Google Fonts)
 
 ## 🖥 Estrutura de Arquivos
-├── index.html # Página principal
-├── login.html # Página de login
-├── cadastro.html # Página de cadastro
-├── style.css # Estilos principais
-├── style2.css # Estilos complementares
-├── Logo.svg # Logo do projeto
-├── charge.jpg # Imagem ilustrativa
-├── lixeira-azul.jpg # Imagem lixeira azul
-├── lixeira-vermelha.jpg # Imagem lixeira vermelha
-├── lixeira-verde.jpg # Imagem lixeira verde
-└── README.md # Este arquivo
+- index.html # Página principal
+- login.html # Página de login
+- cadastro.html # Página de cadastro
+- style.css # Estilos principais
+- style2.css # Estilos complementares
+- Logo.svg # Logo do projeto
+- charge.jpg # Imagem ilustrativa
+- lixeira-azul.jpg # Imagem lixeira azul
+- lixeira-vermelha.jpg # Imagem lixeira vermelha
+- lixeira-verde.jpg # Imagem lixeira verde
+- README.md # Este arquivo
