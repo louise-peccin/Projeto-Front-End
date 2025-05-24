@@ -1,0 +1,415 @@
+:root {
+    --cor1: #ECE5DF;
+    --cor2: #DFC8B6;
+    --cor3: #C4C7B6;
+    --cor4: #859B48;
+    --cor5: #1D361F;
+  }
+  
+  body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: var(--cor1);
+      color: var(--cor5);
+      line-height: 1.6;
+  }
+  
+  header {
+      height: 80px;
+      background-color: var(--cor5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0rem 5rem;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+  }
+  
+  nav {
+      display: flex;
+      gap: 1.5rem;
+  }
+  
+  nav a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: var(--cor4);
+      font-weight: 600;
+      transition: color 0.3s;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  nav a:hover {
+      color: var(--cor3);
+  }
+  
+  .logo img {
+      height: 160px;
+      cursor: pointer;
+      width: auto;
+      display: block;
+      transition: transform 0.3s;
+  }
+  
+  .logo img:hover {
+      transform: scale(1.05);
+  }
+  
+  .auth-buttons {
+      display: flex;
+      gap: 0.75rem;
+  }
+  
+  .auth-buttons button {
+      margin-left: 0.5rem;
+      padding: 0.4rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--cor4);
+      color: var(--cor5);
+      font-weight: bold;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .auth-buttons button:hover {
+      background-color: var(--cor3);
+      transform: scale(1.05);
+  }
+  
+  main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .guia-coleta {
+      padding: 2rem 5vw;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  .guia-coleta h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--cor5);
+  }
+  
+  .informacao {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+  }
+  
+  .texto {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      color: var(--cor5);
+      padding: 1.5rem;
+      border-radius: 12px;
+      line-height: 1.6;
+      background-color: var(--cor2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .texto h3 {
+      margin-top: 0;
+      color: var(--cor5);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .texto p {
+      text-indent: 1.5rem; 
+      margin-bottom: 1rem;
+  }
+  
+  .informacao .charge img {
+    height: 350px;
+    width: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 12px;
+  }
+  
+  .charge {
+      flex: 1;
+      min-width: 250px;
+      max-width: 450px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .carrossel {
+      width: 100%;
+      margin: 3rem 0;
+      overflow: hidden;
+  }
+  
+  .carrossel h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--cor5);
+      font-size: 1.8rem;
+  }
+  
+  .carrossel-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+  }
+  
+  .carrossel-slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease;
+  }
+  
+  .slide {
+      flex: 0 0 33.333%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+  }
+  
+  .slide img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
+  }
+  
+  .slide-texto {
+      text-align: center;
+      max-width: 300px;
+  }
+  
+  .slide-texto h3 {
+      color: var(--cor5);
+      margin-bottom: 0.5rem;
+  }
+  
+  .slide-texto p {
+      color: var(--cor5);
+      margin: 0;
+  }
+  
+  .carrossel-btn {
+      background-color: var(--cor4);
+      color: var(--cor1);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  .carrossel-btn:hover {
+      background-color: var(--cor5);
+  }
+  
+  .forum-container {
+      background-color: var(--cor3);
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 12px;
+      max-width: 800px;
+      width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .forum-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--cor5);
+      font-size: 1.8rem;
+  }
+  
+  .chat-box {
+      background-color: var(--cor1);
+      border: 1px solid var(--cor4);
+      border-radius: 8px;
+      height: 300px;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+  }
+  
+  .message {
+      background-color: var(--cor4);
+      color: var(--cor1);
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      align-self: flex-start;
+      max-width: 70%;
+      word-wrap: break-word;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .chat-input {
+      display: flex;
+      gap: 0.75rem;
+  }
+  
+  .chat-input input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid var(--cor4);
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+  }
+  
+  .chat-input button {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--cor4);
+      color: var(--cor1);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .chat-input button:hover {
+      background-color: var(--cor5);
+      transform: scale(1.05);
+  }
+  
+  footer {
+      background-color: var(--cor5);
+      color: var(--cor4);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem 5rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+  }
+
+  /* Ajuste apenas para a imagem da lixeira vermelha */
+.slide:nth-child(2) img {
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover; /* mantém a proporção */
+}
+  
+  .footer-left {
+      flex: 1;
+      min-width: 200px;
+  }
+  
+  .footer-members {
+      flex: 1;
+      min-width: 250px;
+  }
+  
+  .footer-members h4 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--cor3);
+      font-size: 1.1rem;
+  }
+  
+  .members-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+  
+  .members-list li a {
+      color: var(--cor4);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+  
+  .members-list li a:hover {
+      color: var(--cor3);
+  }
+  
+  .members-list li a i {
+      font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+      header {
+          padding: 0 1.5rem;
+          flex-wrap: wrap;
+          height: auto;
+          padding: 1rem;
+      }
+      
+      .logo img {
+          height: 120px;
+          order: -1;
+          margin: 0 auto;
+      }
+      
+      nav, .auth-buttons {
+          width: 100%;
+          justify-content: center;
+          margin: 0.5rem 0;
+      }
+      
+      .informacao {
+          flex-direction: column;
+      }
+      
+      .texto, .charge {
+          min-width: 100%;
+          max-width: 100%;
+      }
+      
+      footer {
+          flex-direction: column;
+          gap: 1.5rem;
+          padding: 1.5rem;
+      }
+      
+      .footer-members h4 {
+          text-align: center;
+      }
+      
+      .members-list {
+          align-items: center;
+      }
+  }
