@@ -41,7 +41,7 @@ A aplicação aborda os princípios e benefícios da reciclagem, fornecendo um g
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [LINK_DO_SEU_REPOSITORIO]
+    git clone [[LINK_DO_SEU_REPOSITORIO](https://github.com/louise-peccin/Projeto-Front-End)]
     cd Projeto-Front-End
     ```
 2.  **Abra os Arquivos:**
