@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum de Conversa - EcoRecicla</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="topo"></div>
+    <header>
+        <nav>
+            <a href="Principal.html#coleta-seletiva">COLETA SELETIVA</a> <a href="forum.html"><i class="fas fa-comments"></i> FÓRUM</a>
+            <a href="admin.html"><i class="fas fa-user-shield"></i> ADMIN</a> </nav>
+        <a href="Principal.html#topo" class="logo"> <img src="Logo.svg" alt="Logo do site">
+        </a>
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+            <button onclick="window.location.href='cadastro.html'"><i class="fas fa-user-plus"></i> Cadastrar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="forum-container">
+            <h2>Fórum de Conversa</h2>
+            <div class="chat-box" id="chatBox">
+                </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+                <button onclick="enviarMensagem()"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+                <button type="button" onclick="limparTodasMensagens()" style="background-color: #d9534f;"><i class="fas fa-eraser"></i> Limpar Todas as Mensagens</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>Projeto Programação Web Front-End.</p>
+            <p>Todos os direitos reservados.&copy; <span id="ano-atual"></span></p>
+        </div>
+        
+        <div class="footer-members">
+            <h4>Membros do Grupo:</h4>
+            <ul class="members-list">
+                <li><a href="https://gsaorim.github.io/Aula_5_CSS/" target="_blank"><i class="fas fa-user-graduate"></i> Gabriela Saori Miyasaka</a></li>
+                <li><a href="curriculo_julia.pdf" target="_blank"><i class="fas fa-user-graduate"></i> Julia Beiroco Oliveira Fantini</a></li>
+                <li><a href="https://louise-peccin.github.io/curriculo-louise/" target="_blank"><i class="fas fa-user-graduate"></i> Louise Paccola Peccin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="forum.js"></script>
+    <script>
+        // Ano atual no footer
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
