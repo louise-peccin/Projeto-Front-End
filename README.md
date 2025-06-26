@@ -1,54 +1,82 @@
-# Projeto-Front-End
+# EcoRecicla: Coleta Seletiva e Comunidade Online
 
-# EcoRecicla - Sistema de Coleta Seletiva
+![Logo EcoRecicla](Logo.svg) ## Descrição do Projeto
 
-![Logo do Projeto](Logo.svg)
+O **EcoRecicla** é uma aplicação web desenvolvida como parte do Projeto 2 da disciplina de Programação Web Front-End (2025_01) da UTFPR. O objetivo principal é educar os usuários sobre a importância da coleta seletiva e como realizá-la corretamente, além de oferecer um espaço interativo para a comunidade.
 
-Um projeto web para conscientização sobre coleta seletiva e reciclagem, com fórum de discussão e guia interativo.
+A aplicação aborda os princípios e benefícios da reciclagem, fornecendo um guia visual sobre a separação de resíduos em lixeiras coloridas. Além disso, conta com um fórum de discussão para que os usuários possam interagir, trocar informações e fazer perguntas sobre temas relacionados à sustentabilidade e reciclagem. Para gerenciamento, há um painel administrativo.
 
-## 🚀 Funcionalidades
+## Funcionalidades Principais
 
-- **Guia de Coleta Seletiva**:
-  - Informações sobre tipos de resíduos
-  - Cores padrão das lixeiras
-  - Como separar corretamente
+* **Guia de Coleta Seletiva:**
+    * Informações detalhadas sobre o "porquê" e "como" da coleta seletiva.
+    * Sessão interativa com imagens de lixeiras coloridas (azul, vermelha, verde) e seus respectivos materiais para descarte (papel, plástico, vidro).
+    * Carrossel de imagens para visualização fácil dos tipos de lixo em cada lixeira.
+* **Fórum de Discussão:**
+    * Ambiente onde usuários podem enviar mensagens e participar de conversas.
+    * Exibição dinâmica das mensagens enviadas.
+    * Funcionalidade para limpar todas as mensagens do fórum (para administração/testes).
+* **Painel Administrativo (Admin):**
+    * Interface para cadastro de novos usuários.
+    * Funcionalidade de pesquisa de usuários por nome ou e-mail.
+    * Listagem de usuários cadastrados com opções de seleção e exclusão em massa.
+* **Autenticação de Usuários:**
+    * Páginas de Login e Cadastro de Usuários (com campos como nome, idade, e-mail, cidade e tipo de conta).
+* **Navegação Simplificada:**
+    * Header responsivo com links diretos para Coleta Seletiva, Fórum e Admin, além de botões para Entrar e Cadastrar.
+    * Navegação aprimorada para evitar redirecionamentos desnecessários (agora direto entre Admin e Fórum).
+* **Responsividade:**
+    * Layout adaptável para diferentes tamanhos de tela (desktops, tablets e smartphones).
 
-- **Fórum de Discussão**:
-  - Espaço para tirar dúvidas
-  - Compartilhamento de experiências
-  - Moderação de conteúdo
+## Tecnologias Utilizadas
 
-- **Sistema de Login/Cadastro**:
-  - Página de cadastro com validação
-  - Página de login segura
-  - Diferenciação de tipos de usuário
+* **HTML5:** Estrutura e conteúdo das páginas web.
+* **CSS3:** Estilização e layout responsivo da aplicação (`style1.css` para layout principal e `style2.css` para páginas de autenticação).
+* **JavaScript:** Lógica interativa para o carrossel, funcionalidades do fórum (enviar/limpar mensagens) e gestão de usuários no painel administrativo (cadastro, pesquisa, exclusão).
+* **Font Awesome:** Ícones utilizados em toda a aplicação para melhorar a experiência visual.
+* **Google Fonts (Poppins):** Fonte tipográfica utilizada para o design moderno.
 
-## 🛠 Tecnologias Utilizadas
+## Como Executar o Projeto Localmente
 
-- **Frontend**:
-  ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-  ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)
-  ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-  ![Font Awesome](https://img.shields.io/badge/-Font%20Awesome-528DD7?style=flat-square&logo=font-awesome&logoColor=white)
+1.  **Clone o Repositório:**
+    ```bash
+    git clone [LINK_DO_SEU_REPOSITORIO]
+    cd nome-do-seu-repositorio
+    ```
+2.  **Abra os Arquivos:**
+    Simplesmente abra o arquivo `Principal.html` em seu navegador web. Todos os outros arquivos (CSS, JS, outras páginas HTML e imagens) devem estar na mesma estrutura de diretórios para que a aplicação funcione corretamente.
 
-- **Design**:
-  ![Google Fonts](https://img.shields.io/badge/-Google%20Fonts-4285F4?style=flat-square&logo=google-fonts&logoColor=white)
-  ![Color Scheme](https://img.shields.io/badge/-Paleta%20de%20Cores-1D361F-859B48?style=flat-square)
+## Estrutura do Projeto
+├── admin.html
+├── cadastro.html
+├── forum.html
+├── index.html (ou Principal.html)
+├── login.html
+├── style1.css
+├── style2.css
+├── Logo.svg
+├── Reciclagem.jpeg
+├── Lixeira Azul - Papel.avif
+├── Lixeira Vermelha - Plástico.avif
+├── Lixeira Verde - Vidro.avif
+└── ... (outros arquivos de imagem ou js, se houver)
 
-## 📋 Pré-requisitos
+* `Principal.html`: Página inicial com o guia de coleta seletiva e carrossel.
+* `forum.html`: Página do fórum de discussão.
+* `admin.html`: Painel de administração de usuários.
+* `login.html`: Página de login de usuários.
+* `cadastro.html`: Página de cadastro de novos usuários.
+* `style1.css`: Folha de estilos principal para as páginas informativas e o header.
+* `style2.css`: Folha de estilos para as páginas de login e cadastro.
+* `Logo.svg`: Logotipo do projeto.
+* `Reciclagem.jpeg`, `Lixeira Azul - Papel.avif`, etc.: Imagens do guia de coleta.
 
-- Navegador moderno (Chrome, Firefox, Edge)
-- Conexão com internet (para Font Awesome e Google Fonts)
+## Créditos
 
-## 🖥 Estrutura de Arquivos
-- index.html # Página principal
-- login.html # Página de login
-- cadastro.html # Página de cadastro
-- style.css # Estilos principais
-- style2.css # Estilos complementares
-- Logo.svg # Logo do projeto
-- charge.jpg # Imagem ilustrativa
-- lixeira-azul.jpg # Imagem lixeira azul
-- lixeira-vermelha.jpg # Imagem lixeira vermelha
-- lixeira-verde.jpg # Imagem lixeira verde
-- README.md # Este arquivo
+Este projeto foi desenvolvido pelos seguintes membros da equipe:
+
+* **Gabriela Saori Miyasaka:** [[Link para Portfólio/GitHub](https://gsaorim.github.io/Aula_5_CSS/)]
+* **Julia Beiroco Oliveira Fantini:** [curriculo_julia.pdf]
+* **Louise Paccola Peccin:** [[Link para Portfólio/GitHub](https://louise-peccin.github.io/curriculo-louise/)]
+
+Professor(a): Rosangela de Fátima Pereira Marquesone
