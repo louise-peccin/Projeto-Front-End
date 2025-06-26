@@ -6,7 +6,7 @@
     --cor5: #1D361F; /* Verde escuro (texto principal, header) */
 }
 
-
+/* Base e Layout Geral */
 body {
     min-height: 100vh;
     display: flex;
@@ -20,8 +20,8 @@ body {
 }
 
 main {
-    flex: 1; 
-    padding: 2rem 0; 
+    flex: 1; /* Garante que o main ocupe o espaço restante */
+    padding: 2rem 0; /* Padding superior e inferior para conteúdo principal */
 }
 
 /* Cabeçalho */
@@ -32,11 +32,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0rem 5rem;
-    overflow: hidden; 
-    position: sticky; 
+    overflow: hidden; /* Para garantir que elementos que saiam do header não apareçam */
+    position: sticky; /* Fixa o header no topo */
     top: 0;
-    z-index: 100; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    z-index: 100; /* Garante que o header fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 nav {
@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 .logo img {
-    height: 150px; 
+    height: 150px; /* Tamanho do logo */
     vertical-align: middle;
 }
 
@@ -75,7 +75,7 @@ nav a:hover {
     color: white;
     padding: 0.7rem 1.2rem;
     border: none;
-    border-radius: 25px; 
+    border-radius: 25px; /* Bordas arredondadas */
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
@@ -89,7 +89,7 @@ nav a:hover {
     background-color: var(--cor3);
 }
 
-
+/* Seções de Conteúdo (Gerais) */
 section {
     padding: 2rem 5%;
     margin-bottom: 2rem;
@@ -105,6 +105,7 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Guia de Coleta Seletiva (Principal.html) */
 .guia-coleta {
     max-width: 1200px;
     margin: 0 auto;
@@ -112,27 +113,27 @@ p {
 
 .informacao {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
-    gap: 30px; 
+    gap: 30px; /* Espaço entre os itens */
 }
 
 .informacao .texto {
-    flex: 1; 
-    min-width: 300px; 
+    flex: 1; /* Permite que o texto cresça e encolha */
+    min-width: 300px; /* Garante que o texto não fique muito pequeno */
     padding: 20px;
     background-color: var(--cor2);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.informacao .charge { 
-    flex: 1; 
-    min-width: 300px; 
-    display: flex; 
-    justify-content: center; 
+.informacao .charge { /* Torna o container da imagem flexível */
+    flex: 1; /* Permite que a imagem cresça e encolha */
+    min-width: 300px; /* Garante que a imagem não fique muito pequena */
+    display: flex; /* Garante que a imagem dentro seja flexível se necessário */
+    justify-content: center; /* Centraliza a imagem dentro de seu container */
     align-items: center;
 }
 
@@ -143,21 +144,21 @@ p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Carrossel */
 .carrossel {
-    width: 100%; 
+    width: 100%; /* Largura total */
     margin: 3rem 0;
     overflow: hidden;
-    text-align: center; 
+    text-align: center; /* Centraliza o título */
 }
 
 .carrossel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 900px; 
+    max-width: 900px; /* Largura máxima do carrossel */
     margin: 0 auto;
-    overflow: hidden; 
+    overflow: hidden; /* Esconde os slides que estão fora da vista */
     position: relative;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -167,11 +168,11 @@ p {
 .carrossel-slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%; 
+    width: 100%; /* Ocupa toda a largura do container */
 }
 
 .slide {
-    min-width: 100%; 
+    min-width: 100%; /* Cada slide ocupa 100% da largura visível */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -183,15 +184,16 @@ p {
 .slide img {
     max-width: 100%;
     height: auto;
-    max-height: 350px; 
+    max-height: 350px; /* Altura máxima para as imagens do carrossel */
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
+/* Ajuste apenas para a imagem da lixeira vermelha */
 .slide:nth-child(2) img {
     width: 200px;
     height: 300px;
-    object-fit: cover; 
+    object-fit: cover; /* mantém a proporção */
 }
 
 .slide-texto h3 {
@@ -204,7 +206,7 @@ p {
 }
 
 .carrossel-btn {
-    background-color: rgba(29, 54, 31, 0.7); 
+    background-color: rgba(29, 54, 31, 0.7); /* Cor5 com transparência */
     color: white;
     border: none;
     padding: 15px 10px;
@@ -213,7 +215,7 @@ p {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
-    z-index: 10; 
+    z-index: 10; /* Acima dos slides */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -230,14 +232,15 @@ p {
     right: 10px;
 }
 
+/* Fórum e Admin (Novos Estilos Reutilizáveis) */
 .forum-container {
-    background-color: var(--cor2); 
+    background-color: var(--cor2); /* Cor de fundo para o container */
     max-width: 800px;
-    margin: 40px auto; 
+    margin: 40px auto; /* Centraliza e adiciona margem */
     padding: 30px;
     border-radius: 12px; /* Mais arredondado */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    color: var(--cor5); 
+    color: var(--cor5); /* Cor do texto dentro do container */
 }
 
 .forum-container h2 {
@@ -246,13 +249,14 @@ p {
     margin-bottom: 25px;
 }
 
+/* Estilo para as mensagens do chat (e reutilizado para itens de lista em admin) */
 .message {
     background-color: var(--cor1);
     border: 1px solid var(--cor3);
     padding: 10px 15px;
     border-radius: 8px;
     margin-bottom: 10px;
-    word-wrap: break-word; 
+    word-wrap: break-word; /* Garante que palavras longas quebrem */
     line-height: 1.5;
     color: var(--cor5);
 }
@@ -261,18 +265,20 @@ p {
     color: var(--cor5);
 }
 
+/* Estilo específico para o chat box */
 .chat-box {
     border: 1px solid var(--cor4);
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9; /* Um fundo mais claro para o chat */
     padding: 15px;
-    height: 400px; 
-    overflow-y: auto; 
+    height: 400px; /* Altura fixa para o chat */
+    overflow-y: auto; /* Adiciona scroll quando o conteúdo excede a altura */
     border-radius: 8px;
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column; /* Para mensagens se empilharem */
 }
 
+/* Estilo para o input do chat e botão */
 .chat-input {
     display: flex;
     gap: 10px;
@@ -283,25 +289,27 @@ p {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid var(--cor3);
-    border-radius: 8px; 
+    border-radius: 8px; /* Mais arredondado */
     font-size: 1rem;
 }
 
+/* Botão de envio de mensagem no chat (verde) */
 .chat-input button {
     padding: 10px 20px;
-    background-color: var(--cor4); 
+    background-color: var(--cor4); /* Verde */
     color: white;
     border: none;
-    border-radius: 25px; 
+    border-radius: 25px; /* Mais arredondado */
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
 .chat-input button:hover {
-    background-color: #6a8037; 
+    background-color: #6a8037; /* Um tom um pouco mais escuro ao passar o mouse */
 }
 
+/* Estilo para o timestamp das mensagens do fórum */
 .timestamp {
     display: block;
     font-size: 0.75em;
@@ -310,10 +318,11 @@ p {
     margin-top: 5px;
 }
 
+/* Formulários (reaproveitando estilos para admin e cadastro/login) */
 form {
     background-color: var(--cor1);
     padding: 25px;
-    border-radius: 12px; 
+    border-radius: 12px; /* Mais arredondado para o container do formulário */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     border: 1px solid var(--cor3);
@@ -331,23 +340,25 @@ form input[type="email"],
 form input[type="password"],
 form input[type="number"],
 form select {
-    width: calc(100% - 20px); 
+    width: calc(100% - 20px); /* Ajusta para padding */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid var(--cor3);
-    border-radius: 8px; 
+    border-radius: 8px; /* Mais arredondado */
     font-size: 1rem;
-    color: var(--cor5); 
-    background-color: white; 
+    color: var(--cor5); /* Cor do texto digitado */
+    background-color: white; /* Fundo do input */
 }
 
+/* Botões dentro de formulários (além dos de auth-buttons) */
+/* Botões de cadastro/submissão e "Limpar Campos" (verde) */
 form button[type="submit"],
-form button[type="button"]:not([style*="background-color: #d9534f;"]) { 
+form button[type="button"]:not([style*="background-color: #d9534f;"]) { /* Exclui botões com estilo inline vermelho */
     padding: 10px 15px;
-    background-color: var(--cor4); 
+    background-color: var(--cor4); /* Verde */
     color: white;
     border: none;
-    border-radius: 25px; 
+    border-radius: 25px; /* Mais arredondado */
     cursor: pointer;
     font-size: 0.95rem;
     font-weight: 600;
@@ -359,17 +370,19 @@ form button[type="button"]:not([style*="background-color: #d9534f;"]):hover {
     background-color: #6a8037;
 }
 
+/* Checkbox para a lista de admin */
 .usuario-checkbox {
     margin-right: 10px;
-    transform: scale(1.2); 
-    vertical-align: middle; 
+    transform: scale(1.2); /* Aumenta um pouco o tamanho */
+    vertical-align: middle; /* Alinha o checkbox com o texto */
 }
 
-button[style*="background-color: #d9534f;"] { 
+/* Botões de exclusão (vermelhos) */
+button[style*="background-color: #d9534f;"] { /* Estilo específico para botões vermelhos */
     background-color: #d9534f !important;
-    border-radius: 25px !important; 
-    color: white !important; 
-    padding: 10px 20px !important;
+    border-radius: 25px !important; /* Bordas arredondadas e importantes */
+    color: white !important; /* Garante que a cor do texto seja branca */
+    padding: 10px 20px !important; /* Ajusta o padding para melhor visual */
 }
 button[style*="background-color: #d9534f;"]:hover {
     background-color: #c9302c !important;
@@ -377,23 +390,24 @@ button[style*="background-color: #d9534f;"]:hover {
 
 /* Botão de pesquisa (verde) */
 button[onclick="pesquisarUsuarios()"] {
-    background-color: var(--cor4) !important; 
-    border-radius: 25px !important; 
+    background-color: var(--cor4) !important; /* Verde, com !important para garantir */
+    border-radius: 25px !important; /* Bordas arredondadas e importantes */
     color: white !important;
     padding: 10px 20px !important;
 }
 button[onclick="pesquisarUsuarios()"]:hover {
-    background-color: #6a8037 !important; 
+    background-color: #6a8037 !important; /* Verde mais escuro no hover */
 }
 
+/* Ajuste para o botão "Limpar Todas as Mensagens" no forum.html (já era verde, só para garantir) */
 .forum-container button[type="button"] {
-    background-color: var(--cor4); 
+    background-color: var(--cor4); /* Usa a cor padrão para botões do tema */
     color: white;
-    border-radius: 25px; 
+    border-radius: 25px; /* Arredondado */
 }
 
 .forum-container button[type="button"]:hover {
-    background-color: #6a8037; 
+    background-color: #6a8037; /* Hover para o botão padrão do tema */
 }
 
 
@@ -404,10 +418,14 @@ footer {
     padding: 2rem 5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* ALTEADO: Centraliza os itens do footer */
     align-items: flex-start;
     gap: 2rem;
-    margin-top: auto; 
+    margin-top: auto; /* Empurra o rodapé para baixo */
+}
+
+.footer-left { /* NOVO: Aplica text-align para centralizar texto */
+    text-align: center;
 }
 
 .footer-left p {
@@ -417,7 +435,7 @@ footer {
 }
 
 .footer-members {
-    text-align: right;
+    text-align: center; /* ALTERADO: Centraliza o texto do lado direito do footer */
 }
 
 .footer-members h4 {
@@ -443,7 +461,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    justify-content: flex-end; 
+    justify-content: center; /* ALTERADO: Centraliza os links de membros */
 }
 
 .members-list li a:hover {
@@ -474,15 +492,16 @@ footer {
     header {
         padding: 0 1.5rem;
         flex-wrap: wrap;
-        height: auto; 
-        padding: 1rem; 
+        height: auto; /* Permite que o header se expanda */
+        padding: 1rem; /* Mais padding quando quebra linha */
         justify-content: center;
     }
     
     .logo img {
-        height: 100px; 
-        order: -1; 
-        margin: 0 auto 1rem auto; 
+        height: 100px; /* Reduz o tamanho do logo */
+        order: -1; /* Coloca o logo acima da navegação */
+        margin: 0 auto 1rem auto; /* Centraliza e adiciona margem inferior */
+    }
     
     nav, .auth-buttons {
         flex-direction: column;
@@ -495,11 +514,11 @@ footer {
     nav a, .auth-buttons button {
         justify-content: center;
         margin: 0.2rem auto;
-        width: 80%; 
+        width: 80%; /* Ocupa mais largura */
     }
 
     .auth-buttons {
-        margin-bottom: 0; 
+        margin-bottom: 0; /* Remove margem extra */
     }
 
     .informacao {
@@ -508,8 +527,8 @@ footer {
     }
 
     .informacao .texto, .informacao .charge {
-        min-width: unset; 
-        width: 90%; 
+        min-width: unset; /* Remove min-width em telas menores */
+        width: 90%; /* Ocupa quase toda a largura */
     }
 
     .forum-container {
@@ -518,7 +537,7 @@ footer {
     }
 
     .chat-box {
-        height: 300px; 
+        height: 300px; /* Altura menor em dispositivos móveis */
     }
 
     .chat-input {
@@ -540,7 +559,7 @@ footer {
         width: 100%;
     }
     .members-list li a {
-        justify-content: center; 
+        justify-content: center; /* Centraliza os links no rodapé mobile */
     }
 }
 
