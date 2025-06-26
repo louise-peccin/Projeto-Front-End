@@ -42,7 +42,7 @@ A aplicação aborda os princípios e benefícios da reciclagem, fornecendo um g
 1.  **Clone o Repositório:**
     ```bash
     git clone [LINK_DO_SEU_REPOSITORIO]
-    cd nome-do-seu-repositorio
+    cd Projeto-Front-End
     ```
 2.  **Abra os Arquivos:**
     Simplesmente abra o arquivo `Principal.html` em seu navegador web. Todos os outros arquivos (CSS, JS, outras páginas HTML e imagens) devem estar na mesma estrutura de diretórios para que a aplicação funcione corretamente.
