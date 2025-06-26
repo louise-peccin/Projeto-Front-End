@@ -14,8 +14,7 @@
     <header>
         <nav>
             <a href="#coleta-seletiva">COLETA SELETIVA</a>
-            <a href="#" onclick="abrirForum()"><i class="fas fa-comments"></i> FÓRUM</a>
-        </nav>
+            <a href="forum.html"><i class="fas fa-comments"></i> FÓRUM</a> <a href="admin.html"><i class="fas fa-user-shield"></i> ADMIN</a> </nav>
         <a href="#topo" class="logo">
             <img src="Logo.svg" alt="Logo do site">
         </a>
@@ -24,18 +23,6 @@
             <button onclick="window.location.href='cadastro.html'"><i class="fas fa-user-plus"></i> Cadastrar</button>
         </div>
     </header>
-
-    <!-- Fórum de Conversação -->
-    <section class="forum-container" id="forumContainer" style="display: none;">
-        <h2>Fórum de Conversa</h2>
-        <div class="chat-box" id="chatBox">
-            <div class="message">Bem-vindo ao fórum! Aqui você pode tirar dúvidas sobre coleta seletiva e reciclagem.</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
-            <button onclick="enviarMensagem()"><i class="fas fa-paper-plane"></i> Enviar</button>
-        </div>
-    </section>
 
     <main>
         <section class="guia-coleta" id="coleta-seletiva">
@@ -58,7 +45,6 @@
                 </div>
             </div>
 
-            <!-- Caixas de texto adicionais -->
             <div class="informacao">
                 <div class="texto">
                     <h3><i class="fas fa-recycle"></i> Benefícios da Coleta Seletiva</h3>
@@ -117,7 +103,7 @@
             <h4>Membros do Grupo:</h4>
             <ul class="members-list">
                 <li><a href="https://gsaorim.github.io/Aula_5_CSS/" target="_blank"><i class="fas fa-user-graduate"></i> Gabriela Saori Miyasaka</a></li>
-                <li><a href="https://juliasl2beiroco.github.io/AtividadeCV/" target="_blank"><i class="fas fa-user-graduate"></i> Julia Beiroco Oliveira Fantini</a></li>
+                <li><a href="curriculo_julia.pdf" target="_blank"><i class="fas fa-user-graduate"></i> Julia Beiroco Oliveira Fantini</a></li>
                 <li><a href="https://louise-peccin.github.io/curriculo-louise/" target="_blank"><i class="fas fa-user-graduate"></i> Louise Paccola Peccin</a></li>
             </ul>
         </div>
@@ -127,27 +113,7 @@
         // Ano atual no footer
         document.getElementById('ano-atual').textContent = new Date().getFullYear();
 
-        // Funções do Fórum
-        function abrirForum() {
-            const forum = document.getElementById("forumContainer");
-            forum.style.display = forum.style.display === "none" ? "block" : "none";
-        }
-
-        function enviarMensagem() {
-            const input = document.getElementById("messageInput");
-            const message = input.value.trim();
-            if (message !== "") {
-                const chatBox = document.getElementById("chatBox");
-                const newMsg = document.createElement("div");
-                newMsg.className = "message";
-                newMsg.textContent = message;
-                chatBox.appendChild(newMsg);
-                input.value = "";
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-        }
-
-        // Carrossel
+        // Carrossel (mantido, pois é parte da página principal)
         let slideIndex = 0;
         
         function moverCarrossel(n) {
@@ -163,7 +129,7 @@
 
         // Inicializa o carrossel
         document.addEventListener('DOMContentLoaded', function() {
-            moverCarrossel(0);
+            moverCarrossel(0); 
         });
     </script>
 </body>
