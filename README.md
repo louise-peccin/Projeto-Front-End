@@ -2,7 +2,7 @@
 
 ![Logo EcoRecicla](Logo.svg) ## Descrição do Projeto
 
-O **EcoRecicla** é uma aplicação web desenvolvida como parte do Projeto 2 da disciplina de Programação Web Front-End (2025_01) da UTFPR. O objetivo principal é educar os usuários sobre a importância da coleta seletiva e como realizá-la corretamente, além de oferecer um espaço interativo para a comunidade.
+O **EcoRecicla** é uma aplicação web desenvolvida como parte do Projeto da disciplina de Programação Web Front-End (2025_01) da UTFPR. O objetivo principal é educar os usuários sobre a importância da coleta seletiva e como realizá-la corretamente, além de oferecer um espaço interativo para a comunidade.
 
 A aplicação aborda os princípios e benefícios da reciclagem, fornecendo um guia visual sobre a separação de resíduos em lixeiras coloridas. Além disso, conta com um fórum de discussão para que os usuários possam interagir, trocar informações e fazer perguntas sobre temas relacionados à sustentabilidade e reciclagem. Para gerenciamento, há um painel administrativo.
 
