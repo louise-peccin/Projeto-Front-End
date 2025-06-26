@@ -1,6 +1,7 @@
 # EcoRecicla: Coleta Seletiva e Comunidade Online
 
-![Logo EcoRecicla](Logo.svg) ## Descrição do Projeto
+![Logo EcoRecicla](Logo.svg) 
+## Descrição do Projeto
 
 O **EcoRecicla** é uma aplicação web desenvolvida como parte do Projeto da disciplina de Programação Web Front-End (2025_01) da UTFPR. O objetivo principal é educar os usuários sobre a importância da coleta seletiva e como realizá-la corretamente, além de oferecer um espaço interativo para a comunidade.
 
