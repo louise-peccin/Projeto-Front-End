@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração - EcoRecicla</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="topo"></div>
+    <header>
+        <nav>
+            <a href="Principal.html#coleta-seletiva">COLETA SELETIVA</a>
+            <a href="forum.html"><i class="fas fa-comments"></i> FÓRUM</a>
+            <a href="admin.html"><i class="fas fa-user-shield"></i> ADMIN</a>
+        </nav>
+        <a href="Principal.html#topo" class="logo">
+            <img src="Logo.svg" alt="Logo do site">
+        </a>
+        <div class="auth-buttons">
+            <button onclick="window.location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+            <button onclick="window.location.href='cadastro.html'"><i class="fas fa-user-plus"></i> Cadastrar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="forum-container">
+            <h2>Painel de Administração</h2>
+
+            <form id="cadastroUsuarioForm">
+                <h3>Cadastrar Novo Usuário</h3>
+                <label for="adminNome">Nome:</label>
+                <input type="text" id="adminNome" required>
+                <label for="adminEmail">Email:</label>
+                <input type="email" id="adminEmail" required>
+                <label for="adminTipo">Tipo de Conta:</label>
+                <select id="adminTipo" required>
+                    <option value="">Selecione</option>
+                    <option value="cooperativo">Cooperativo</option>
+                    <option value="usuario">Usuário</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <button type="submit">Cadastrar Usuário</button>
+                <button type="button" onclick="limparCamposCadastro()">Limpar Campos</button>
+            </form>
+
+            <div class="pesquisa-usuario" style="margin-bottom: 20px;">
+                <h3>Pesquisar Usuário</h3>
+                <input type="text" id="pesquisaInput" placeholder="Pesquisar por nome ou email">
+                <button onclick="pesquisarUsuarios()"><i class="fas fa-search"></i> Pesquisar</button>
+            </div>
+
+            <div class="lista-usuarios">
+                <h3>Usuários Cadastrados</h3>
+                <div style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <button type="button" onclick="marcarTodos()" style="margin-right: 10px;">Marcar Todos</button>
+                        <button type="button" onclick="desmarcarTodos()">Desmarcar Todos</button>
+                    </div>
+                    <button type="button" onclick="excluirTodosUsuarios()" style="background-color: #dc3545; color: white; padding: 8px 15px; border: none; border-radius: 25px; cursor: pointer; font-size: 0.9em;">
+                        <i class="fas fa-trash-alt"></i> Excluir Todos
+                    </button>
+                </div>
+                <ul id="listaDeUsuarios">
+                    </ul>
+                <button type="button" onclick="excluirUsuariosSelecionados()" style="background-color: #d9534f; margin-top: 15px;">Excluir Selecionados</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>Projeto Programação Web Front-End.</p>
+            <p>Todos os direitos reservados.&copy; <span id="ano-atual"></span></p>
+        </div>
+        
+        <div class="footer-members">
+            <h4>Membros do Grupo:</h4>
+            <ul class="members-list">
+                <li><a href="https://gsaorim.github.io/Aula_5_CSS/" target="_blank"><i class="fas fa-user-graduate"></i> Gabriela Saori Miyasaka</a></li>
+                <li><a href="curriculo_julia.pdf" target="_blank"><i class="fas fa-user-graduate"></i> Julia Beiroco Oliveira Fantini</a></li>
+                <li><a href="https://louise-peccin.github.io/curriculo-louise/" target="_blank"><i class="fas fa-user-graduate"></i> Louise Paccola Peccin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+    <script>
+        // Ano atual no footer
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
