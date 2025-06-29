@@ -77,7 +77,7 @@ A aplicação aborda os princípios e benefícios da reciclagem, fornecendo um g
 Este projeto foi desenvolvido pelos seguintes membros da equipe:
 
 * **Gabriela Saori Miyasaka:** [[Link para Portfólio/GitHub](https://gsaorim.github.io/Aula_5_CSS/)]
-* **Julia Beiroco Oliveira Fantini:** [curriculo_julia.pdf]
+* **Julia Beiroco Oliveira Fantini:** [[Link para Portfólio/GitHub](https://juliasl2beiroco.github.io/AtividadeCV/)]
 * **Louise Paccola Peccin:** [[Link para Portfólio/GitHub](https://louise-peccin.github.io/curriculo-louise/)]
 
 Professor(a): Rosangela de Fátima Pereira Marquesone
